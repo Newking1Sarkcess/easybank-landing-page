@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@200;300&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: hsl(0, 0%, 98%);
+    font-size: 18px;
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 400;
+    position: relative;
+}
+
+li a, li, a{
+    text-decoration: none;
+    list-style: none;
+    color: hsl(0, 0%, 53%);
+}
+
+.hr:hover{
+    color: black;
+    cursor: pointer;
+}
+
+.hr::after{
+    content: "";
+    position: relative;
+    background: linear-gradient(to right, rgba(49, 208, 105, 1) 20%, rgba(43, 185, 208, 1) 90%);
+    display: block;
+    height: 3px;
+    width: 0%;
+    top: 17px;
+}
+
+.hr:hover::after{
+    width: 100%;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 3em;
+}
+
+nav{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: hsl(0, 0%, 100%);
+    height: 60px;
+}
+
+span li a{
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: linear-gradient(to right, rgba(49, 208, 105, 1) 20%, rgba(43, 185, 208, 1) 90%);
+    color: white;
+
+}
+
+/* END OF NAVIGATION */
+
+.next-generation{
+    background-image: 
+        url(./images/image-mockups.png),
+        url(./images/bg-intro-desktop.svg);
+    padding: 24.5rem 0;
+    background-repeat: no-repeat;
+    background-position:top -120px right -130px, top -260px right -430px;
+    background-color: hsl(0, 0%, 98%);
+   
+
+}
+
+.text{
+    margin: -14rem 6.4rem;
+
+}
+
+.title{
+    font-size: 50px;
+    width: 40%;
+}
+
+p.desc{
+    width: 35%;
+    margin: 2em 0;
+}
+
+.mobile, span img{
+    display: none;    
+}
+
+/* END OF HEADRE CODE */
+
+section.why{
+    background-color: hsl(220, 16%, 96%);    
+    
+}
+
+.wrapper{
+    padding: 5rem 6.4rem;
+}
+
+.wrapper > p{
+    width: 50%;
+}
+
+.operations{
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr 1fr;
+ gap: 2em;
+ margin-top: 3em;
+}
+
+
+/* latest articles */
+
+section.articles{
+    background-color: hsl(0, 0%, 98%);
+}
+
+.card{
+    background-color: hsl(0, 0%, 97%);
+    margin: 2em 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;   
+}
+
+.card img{
+    width: 100%;
+    height: 160px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.details{
+    padding: 10px;
+    
+}
+
+/* footer */
+
+footer{
+    background-color: hsl(233, 26%, 24%);
+    padding: 1em 6.4em;
+    color: white;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.flex1{
+    display: flex;
+    gap: 7em;
+}
+
+.inline + span{
+    margin: 2em 1em 0 0 ;
+}
+
+.block1 > *, .block2 > *, .flex2 > *{
+    margin: 1em 0;
+
+}
+
+.block1> *:hover, .block2> *:hover, span img:hover{
+    cursor: pointer;
+    color: green;
+}
+
+.flex2 div{
+    margin-top: 2em ;
+    color: gray;
+}
+
+/* .flex2 span:hover{
+    opacity: 0.7;
+    
+} */
+
+.footer-logo{
+    margin: 1em 0;
+    
+}
+
+.icons{
+    display: flex;
+    margin-top: 2em;
+    gap: 1em;
+    justify-content: center;
+}
+
+/* ################# MOBILE VIEW ################ */
+@media screen and (max-width:375px) {
+ 
+    nav span li, .icon-close{
+        display: none;
+    }
+
+    .icon-close.show{
+        display: block;
+    }
+
+    .hamburger{
+        display: block;
+        }
+
+    .hamburger.hide{
+        display: none;
+    }  
+
+    nav{
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        background-color: white;
+        padding: 0 2em;
+    }
+
+    nav ul{
+        border-radius: 5px;
+        display: none ;
+        position: absolute;
+        top: 5em;
+        width: 80%;
+        text-align: center;
+        background-color: white;
+        transform: translateX(150%);
+        transition: transform .3s ease-in-out;
+    }
+
+    nav ul.open{
+        display: block;
+        transform: translateX(0%);
+        
+    } 
+
+    nav ul li{
+        margin: 1em 0;
+    }
+
+    .hr::after{
+        display: none;
+
+    }
+
+    /* header modification */
+
+    .next-generation{
+        background-size: 90%, 200%;
+        background-position: center top -7.5rem, left -6rem top -18rem;
+        width: 100%;
+        padding: 18rem 0 7rem 0;
+    }
+
+    .text{
+        margin: 2em 0.1em;
+        text-align: center;
+        
+    }
+
+    .title{
+        font-size: 40px;
+        width: 100%;
+        margin: auto;
+    }
+    
+    p.desc{
+        width: 100%;
+        margin: 2em 0;
+    }
+
+
+    /* why choose easybank */
+ 
+    .why{
+        text-align: center;
+        background-color: lightgray;
+        padding: 3rem  0;
+    }
+
+    .why h1{
+        width: 60%;
+        margin: auto;
+    }
+
+    .why p{
+        padding-bottom: 2rem;
+        
+    }
+
+    h2{
+        font-size: 25px;
+    }
+
+    .operations{
+        display: block;
+        width: 80%;
+        margin: auto;
+    
+    }
+
+    .wrapper{
+        padding: unset;
+    }
+
+    .wrapper > p{
+        width: 90%;
+        margin: auto;
+        
+    }
+    
+    
+    /* latest articles */
+
+    .wrapper{
+        padding: 2rem 0;
+    }
+
+    .wrapper h1{
+        text-align: center;
+        margin-bottom: 3em;
+    }
+
+
+    /* footer */
+    footer{
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        padding: 3em 0;
+    }
+
+    .container{
+        padding: 0;
+        
+    }
+
+    .row{
+        display: block;
+        
+    }
+    
+    .flex1{
+        display: block;
+        
+    }
+    
+    .block1 > *, .block2 > *{
+        margin: 1em 0;
+        
+    }
+    
+    .flex2{
+        margin-top: 2.5em ;
+        font-size: 18px;
+    }
+    
+    .footer-logo{ 
+        margin: unset;
+        
+    }
+
+
+}
